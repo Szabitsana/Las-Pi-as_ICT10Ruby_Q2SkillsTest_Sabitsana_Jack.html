@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonmetal Element Generator</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+
+<script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #142D4E;
+            color: #142D4E;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 430px;
+            padding: 35px;
+            background: #F2EBDD;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 25px;
+        }
+
+        .subtitle {
+            color: #55738A;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #9CCFE3;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            background: white;
+            color: #142D4E;
+        }
+
+        input:focus {
+            border-color: #238F8B;
+            box-shadow: 0 0 0 3px rgba(35, 143, 139, 0.12);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 14px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #238F8B;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #176D6B;
+        }
+
+        #result {
+            margin-top: 22px;
+            padding: 18px;
+            background: #D9EDF5;
+            border-radius: 10px;
+            text-align: left;
+            line-height: 2;
+            font-size: 14px;
+            min-height: 30px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #55738A;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Element Generator</h1>
+
+        <p class="subtitle">
+            Nonmetal Element Information System
+        </p>
+
+        <input
+            type="text"
+            id="element"
+            placeholder="Enter an element (e.g. Oxygen)"
+        >
+
+        <button py-click="generate">
+            Generate Information
+        </button>
+
+        <div id="result">
+            <span style="color: #55738A;">
+                Your element information will appear here.
+            </span>
+        </div>
+
+        <p class="footer">
+            PERIODICA TABELO
+        </p>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
